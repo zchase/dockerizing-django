@@ -3,12 +3,12 @@ zchase/dockerizing-django:
     - '*'
   PreInstall:
     - echo "Starting PreInstall Steps"
-    #- cd /distelli/envs/$DISTELLI_ENV
-    #- sudo /usr/local/bin/docker-compose down
+    - cd /distelli/envs/$DISTELLI_ENV
+    - sudo /usr/local/bin/docker-compose down
   Start:
     - cd /distelli/envs/$DISTELLI_ENV
     - echo "Starting Application"
     - sudo /usr/local/bin/docker-compose build
     - sudo /usr/local/bin/docker-compose up -d
-    #- echo "Starting Migrations"
-    #- sudo /usr/local/bin/docker-compose run web /usr/local/bin/python manage.py migrate
+    - echo "Starting Migrations"
+    - sudo /usr/local/bin/docker-compose run web /usr/local/bin/python manage.py migrate
