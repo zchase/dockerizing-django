@@ -5,6 +5,7 @@ zchase/dockerizing-django:
     #- cd /distelli/env/$DISTELLI_ENV
     #- sudo /usr/local/bin/docker-compose down
   Start:
+    - cd $DISTELLI_INSTALLHOME
     - sudo /usr/local/bin/docker-compose build
     - sudo /usr/local/bin/docker-compose up -d
     - sudo /usr/local/bin/docker-compose run web /usr/local/bin/python manage.py migrate
