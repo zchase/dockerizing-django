@@ -2,8 +2,8 @@ zchase/dockerizing-django:
   PkgInclude:
     - '*'
   PreInstall:
-    - cd /distelli/env/$DISTELLI_ENV
-    - sudo /usr/local/bin/docker-compose down
+    #- cd /distelli/env/$DISTELLI_ENV
+    #- sudo /usr/local/bin/docker-compose down
   Start:
     - sudo /usr/local/bin/docker-compose build
     - sudo /usr/local/bin/docker-compose up -d
